@@ -1,0 +1,19 @@
+public class Main {
+
+	public static void main(String[] args) {
+		LinkedList<Student> myList= new LinkedList<Student>();
+		  Student A= new Student("Anisha", 700111111);
+		  Student B= new Student("Barry", 700222222);
+		  Student C= new Student("Carly", 700333333);
+		  Student D= new Student("Daniqua", 700444444);
+		  Student E= new Student("Eugenio", 700555555); 
+		  
+		 
+		  myList.addToEnd(E);
+		  System.out.println(myList);
+		 // System.out.println(myList.getFrontData());
+		//  System.out.println(myList.getLength());
+
+	}
+
+}
