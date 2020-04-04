@@ -12,7 +12,14 @@ public class Stack<T> implements StackInterface<T>{
 	
 	@Override
 	public T pop() {
-		T data = gethead();
+		if(myList.isEmpty()) {
+			return null;
+		}
+		else {
+			T temp = myList.getFrontData();
+			myList.removeFromFront();
+		}
+		 return temp;
 	}
   
    
