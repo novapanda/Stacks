@@ -1,0 +1,23 @@
+public class Stack<T> implements StackInterface<T>{
+	
+	LinkedList<T> myList = new LinkedList<T>();
+	@Override
+	public boolean isEmpty() {
+		
+	}
+	@Override
+	public void push(T newEntry) {
+		myList.addToFront(newEntry);
+	}
+	
+	@Override
+	public T pop() {
+		T data = gethead();
+	}
+  
+   
+ 
+  
+  
+  
+}
