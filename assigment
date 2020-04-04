@@ -1,0 +1,60 @@
+B) Stack TODO:  Stack will implement StackInterface and is composed of a LinkedList instance as its only state variable
+1) Look at the StackInterface.java file
+2) Stack.java will implement this interface, therefore it must include all the functions of this interface. Add all these functions to Stack.java making sure to initially put any dummy return values for any functions that return values so this compiles. You will change this later when you implement these functions. You must also create a constructor for your stack that will  point your LinkedList reference to an empty linked list  (empty linked list, should use the LinkedList constructor)
+
+You must also implement toString in Stack which just invokes the linkedlist toString. Make sure you implement this early so you can use it to test your other functions as you incrementally develop
+
+3) Implement your Stack functions. Note that in a stack we are inserting and removing items from the front of the linked list (what head points to) (LIFO). Here are the functions you must implement in stack. Take special care to understand where you will insert a new item into the linked list for Stack and where you will remove items from the linked list.
+
+
+FOR EACH OF THESE FUNCTIONS MAP OUT THE ASSOCIATED LINKED LIST FUNCTIONS YOU WILL INVOKE TO ACCOMPLISH THIS TASK 
+
+   public void push(T newEntry);
+Puts a new value on the stack. What does that mean in terms of the linkedList object in stack?
+
+ public T pop();
+Takes an item off the stack and returns it. returns null in the empty case
+
+ public T peek();
+Allows us to see the top item. In the empty stack scenario top item could be null. Peek doesn't change the list
+
+   public boolean isEmpty();
+Self explanatory...
+
+   public void clear();
+Clears the stack. Whats an innovative way to do this using stack functions you already wrote?
+
+   public String toString();
+Should simply invoke Linked Lists toString
+
+
+
+C) Queue TODO: Queue will implement QueueInterface and is composed of a LinkedList instance as its only state variable
+1) Look at the QueueInterface.java file
+2) Queue.java will implement this interface, therefore it must include all the functions of this interface. Add all these functions to Queue.java making sure to initially put any dummy return values for any functions that return values so this compiles. You will change this later when you implement these functions. You must also create a constructor for your queue that will  point your LinkedList reference to an empty linked list  (empty linked list, should use the LinkedList constructor)
+
+You must also implement toString in Queue which just invokes the LinkedList toString. . Make sure you implement this early so you can use it to test your other functions as you incrementally develop.
+
+For Queue think about where you will insert into and remove from in the linked list.
+
+3) here are the functions you must implement
+
+FOR EACH OF THESE FUNCTIONS MAP OUT THE ASSOCIATED LINKED LIST FUNCTIONS YOU WILL INVOKE TO ACCOMPLISH THIS TASK 
+
+  public void enqueue(T newEntry);
+Puts an item in the queue. Will this be in the front or the back of the linked list?
+
+  public T dequeue();
+Takes an item out of the queue. Will this be in the front or the back of the queue?
+
+
+  public T getFront();
+Just like peek in stack
+
+  public boolean isEmpty();
+Self explanatory
+
+  public void clear();
+Just like stack, can you use a previously implemented method to implement this in queue?
+   public String toString();
+Should simply invoke Linked Lists toString
