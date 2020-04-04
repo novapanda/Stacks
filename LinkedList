@@ -1,0 +1,137 @@
+public class LinkedList <T>
+{ //MUST IMPLEMENT ALL FUNCTIONS
+  private Node head;
+  private Node tail;
+  
+   public LinkedList()
+  {
+    head=null;
+    tail=null;
+   
+  }
+   
+   public Node gethead()
+   {
+     return head;
+   }
+   
+   public boolean isEmpty() {
+		return head == null;
+	}
+  
+  public T getFrontData()
+  {
+    if(head == null) {
+    	return null;
+    }
+    Node temp = head;
+    return temp.data;
+  }
+  
+  public int getLength()
+  {
+	int counter = 0;
+    if(head == null) {
+    	return 0;
+    }
+    Node current = head;
+    while(current != null) {
+    	counter++;
+    	current = current.next;
+    }
+    return counter;
+  }
+
+  
+  public void addToFront(T toAdd)
+  {
+	Node addNode = new Node(toAdd, head);
+	//Node newTail = tail.next; 
+    head = addNode;
+
+   
+  }
+  
+  public void addToEnd(T toAdd)
+  {
+	  Node  current=head;
+	    Node prev=head;
+	    while(current!=null)
+	    {
+	      prev=current;
+	      current=current.getnext();
+	    }
+	    Node nodeToAdd= new Node(toAdd, null);
+	    if(prev==null)
+	    {
+	      head=nodeToAdd;
+	      return;
+	    }
+	    prev.setnext(nodeToAdd);
+    
+  }
+  
+  
+  public T removeFromFront()
+  {
+	  if(head==null)
+	    {
+	      return null;
+	    }
+	    Node toReturn=head;
+	    head=head.getnext();
+	    return toReturn.getdata();
+   
+  }
+  
+  
+  @Override
+  public String toString()
+  {
+	    Node  current=head;
+	    String toReturn="head->";
+	    while(current!=null)
+	    {
+	      toReturn=toReturn+current.getdata()+"->";
+	      current=current.getnext();
+	    }
+	    toReturn=toReturn+"null";
+	    return toReturn;
+	  
+  }
+  
+  class Node
+  {
+    private T data;
+    private Node next;
+    Node(T dataPassed, Node nextPassed)
+    {
+      data=dataPassed;
+      next=nextPassed;
+    }
+    
+    public void setdata(T dataPassed)
+    {
+     data=dataPassed;
+    }
+    public T getdata()
+    {
+      return data;
+    }
+    public Node getnext()
+    {
+     return next;
+    }
+    public void setnext(Node passed)
+    {
+      next=passed;
+    }
+    public String toString()
+    {
+      return (""+data);
+    }
+    
+  }
+  
+  
+}
