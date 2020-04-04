@@ -1,0 +1,5 @@
+public class Queue<T> implements QueueInterface<T>{
+    LinkedList<T> myList;
+
+
+}
